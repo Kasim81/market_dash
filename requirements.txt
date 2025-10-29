@@ -1,6 +1,6 @@
 streamlit
 pandas
 yfinance
-plotly.graph_objs
+plotly
 numpy
 datetime
