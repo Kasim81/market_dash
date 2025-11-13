@@ -273,7 +273,7 @@ def run_dashboard():
         fig.update_layout(
             title=f"{chart_asset} Price History ({chart_period})",
             xaxis_title="Date",
-            yaxis_title="Price (USD)"
+            yaxis_title="Price (LCL)"
         )
         st.plotly_chart(fig, use_container_width=True)
         st.download_button(
