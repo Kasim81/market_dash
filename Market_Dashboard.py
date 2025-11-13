@@ -240,7 +240,7 @@ def run_dashboard():
         dashboard_df['Asset Class'].isin(class_filter)
     ]
 
-    sort_columns = ['Perf 1D', 'Perf 1W', 'Perf 1M', 'Perf 3M', 'Perf 6M',
+    sort_columns = ['Index', 'Perf 1D', 'Perf 1W', 'Perf 1M', 'Perf 3M', 'Perf 6M',
                     'Perf 1Y', 'Perf 2Y', 'Perf 3Y', 'Market Cap', 'Current Price']
     sort_column = st.selectbox("Sort by", sort_columns, index=0)
     ascending = st.checkbox("Sort Ascending", value=False)
