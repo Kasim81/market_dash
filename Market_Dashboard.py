@@ -253,9 +253,14 @@ def run_dashboard():
 
     # Charting
     st.header("Interactive Price Chart")
-    chart_asset = st.selectbox("Select asset for chart", filtered_df['Name'].unique())
+    chart_asset_name = st.selectbox("Select asset for chart", filtered_df['Name'].unique())
+
+    # Retrieve the corresponding symbol for that Name
+    chart_asset = filtered_df.loc[filtered_df['Name'] == chart_asset_name, 'Symbol'].iloc[0] if 'Symbol' in filtered_df.columns else None
+
     chart_period = st.selectbox("Historical period", ['1mo','3mo','6mo','1y','2y','3y','5y','max'], index=3)
     chart_data = yf.Ticker(chart_asset).history(period=chart_period)
+
 
     if not chart_data.empty:
         fig = go.Figure()
