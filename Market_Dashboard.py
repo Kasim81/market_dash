@@ -271,7 +271,7 @@ def run_dashboard():
             name=chart_asset
         ))
         fig.update_layout(
-            title=f"{chart_asset} Price History ({chart_period})",
+            title=f"{chart_asset_name} Price History ({chart_period})",
             xaxis_title="Date",
             yaxis_title="Price (LCL)"
         )
